@@ -2,7 +2,7 @@ import random
 Total_workinghours=8
 _wageperhour=20
 Part_time_hours=4
-
+Days_PerMonth=20
 def checkattendance():
     if random.randint(0,1) == 1:
         print("Employee is present today")
@@ -23,8 +23,13 @@ def switch():
     elif choice is 2:
         print("Employee IS DOING PART TIME TODAY")
 
+def CalculateMonthlyWage():
+    print("THE WAGE PER MONTH WILL BE",Days_PerMonth*Total_workinghours*_wageperhour)
+
+
 if __name__ == '__main__':
     print("WELCOME TO EMPLOYEE WAGE CALCULATION PROGRAM")
     checkattendance()
     calculatewage()
     switch()
+    CalculateMonthlyWage()
